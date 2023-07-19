@@ -1,0 +1,44 @@
+@import vars
+@import mixins
+
+.footer
+	@include flex(center, space-between)
+
+	&_info
+		max-width: 32rem
+
+		&-socials
+			display: none
+
+		&-logo
+			margin-bottom: 1.5rem
+
+		&-text
+			max-width: 19rem
+			font-weight: 700
+			line-height: 1.5rem
+			margin-bottom: 8.5rem
+
+		&-copyright
+			line-height: 2rem
+			opacity: 0.5
+
+	&_about
+		@include flex(flex-start)
+		gap: 13rem
+
+		&-ul
+			display: grid
+			gap: 1rem
+
+			&--title
+				margin-bottom: 0.5rem
+				color: $orange_text
+				font-size: 1.5rem
+				font-weight: 700
+				line-height: 2rem
+
+			&--li
+				line-height: 2rem
+				&:hover
+					color: $orange_text

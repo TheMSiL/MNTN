@@ -1,0 +1,99 @@
+@import vars
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+	&:focus
+		outline: none
+
+html, body
+	height: $hundred_percent
+	line-height: 1
+
+body
+	font-family: $main_font
+	-webkit-tap-highlight-color: transparent
+	-moz-tap-highlight-color: transparent
+	-ms-tap-highlight-color: transparent
+	overflow-x: hidden
+	background: linear-gradient(347deg, rgba(11, 29, 38, 0.00) 0%, #0B1D26 $hundred_percent)
+	color: $white_text
+
+h1,h2,h3,h4,h5
+	font-family: $titles_font
+
+a
+	text-decoration: none
+	color: inherit
+
+li
+	list-style: none
+
+.wrapper
+	min-height: $hundred_percent
+
+.logo
+	font-family: $titles_font
+	font-size: 2rem
+	font-weight: 700
+	letter-spacing: 0.2rem
+	transition: 1s ease
+
+	&:hover
+		transform: translateY(45%)
+
+.overlay
+	position: fixed
+	top: 0
+	left: 0
+	width: $hundred_percent
+	height: $hundred_percent
+	background-color: rgba(11, 29, 38, 0.9)
+	z-index: 1000
+	display: none
+	justify-content: center
+	align-items: center
+	transition: $ease500
+	transform: translateY(-$hundred_percent)
+
+	&_list
+		display: grid
+		gap: 2.5rem
+		font-size: 1.25rem
+		text-align: center
+		transition: $ease500
+
+		&-item
+			display: block
+			&:hover
+				transform: scale(110%)
+
+.burger
+	display: none
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	cursor: pointer
+	z-index: 1001
+	position: fixed
+	top: 42px
+	right: 25px
+	gap: 4px
+
+	.line
+		width: 25px
+		height: 2px
+		background-color: #FFFFFF
+		transition: transform $ease500, opacity 300ms ease
+		z-index: 1001
+		cursor: pointer
+
+.active
+	.line:nth-child(1)
+		transform: rotate(-45deg) translate(-3px, 3px)
+	.line:nth-child(2)
+		opacity: 0
+	.line:nth-child(3)
+		transform: rotate(45deg) translate(-5px, -6px)

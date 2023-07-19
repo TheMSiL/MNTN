@@ -1,0 +1,85 @@
+@import vars
+@import mixins
+
+@keyframes goRight
+	0%
+		transform: translateX(0%)
+
+	100%
+		transform: translateX(1.5rem)
+
+.content
+	position: relative
+	z-index: 2
+	background-color: $bg_color
+
+	&::before
+		pointer-events: none
+		content: ''
+		position: absolute
+		top: 1px
+		left: 0
+		width: $hundred_percent
+		height: 300px
+		transform: translate(0px, -$hundred_percent)
+		background: linear-gradient(180deg, rgba(11, 28, 38, 0) 5%, $bg_color $hundred_percent)
+
+.section
+	@include flex(center, space-between)
+	margin-bottom: 12.5rem
+	position: relative
+
+	&_span
+		position: absolute
+		color: $white_text
+		font-size: 15rem
+		font-weight: 700
+		line-height: 15rem
+		top: 2.5rem
+		opacity: 0.1
+
+	&_content
+		display: flex
+		flex-direction: column
+		gap: 1.7rem
+		max-width: 40rem
+		margin: 0 auto
+		position: relative
+		z-index: 2
+
+		&-subtitle
+			@include flex(center)
+			color: $orange_text
+			font-size: 1.25rem
+			font-weight: 700
+			letter-spacing: 0.375rem
+			text-transform: uppercase
+			gap: 2rem
+
+			&::before
+				display: inline-block
+				content: ''
+				width: 4.5rem
+				height: 0.125rem
+				background-color: $orange_text
+
+		&-title
+			font-size: 4rem
+
+		&-text
+			font-size: 1.2rem
+			font-weight: 700
+			line-height: 2rem
+
+		&-more
+			display: flex
+			align-items: center
+			gap: 1rem
+
+			&--text
+				color: $orange_text
+				font-size: 1.2rem
+				font-weight: 700
+
+			img
+				animation: goRight 1.5s infinite ease

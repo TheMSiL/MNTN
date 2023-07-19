@@ -1,0 +1,60 @@
+@import vars
+
+.socials
+	@include flex(center, center)
+	flex-direction: column
+	position: fixed
+	gap: 1rem
+	top: 28%
+	left: 3%
+	z-index: 6
+
+	&_text
+		writing-mode: vertical-lr
+		text-orientation: mixed
+		font-weight: 700
+
+	img
+		width: 1.5rem
+		height: 1.5rem
+		transition: $ease1
+
+		&:hover
+			transform: scale(1.5)
+
+.slider
+	position: fixed
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	position: fixed
+	top: 28%
+	right: 2%
+	z-index: 6
+
+	&_items
+		display: grid
+		gap: 2.5rem
+		justify-items: end
+
+		.slide
+			cursor: pointer
+			transition: $ease500
+			&:hover
+				transform: scale(1.5)
+
+		.active
+			color: $orange_text
+
+	.progress-bar
+		margin-left: auto
+		position: relative
+		width: 0.2rem
+		background-color: rgba(255, 255, 255, 0.5)
+
+		&_counter
+			background-color: $white_text
+			position: absolute
+			height: 25%
+			width: 0.2rem
+			top: 0
+			transition: $ease1

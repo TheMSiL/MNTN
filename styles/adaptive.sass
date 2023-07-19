@@ -1,0 +1,230 @@
+@import mixins
+
+@media (max-width: 1440px)
+	.section
+		gap: 2rem
+
+		&_content
+			max-width: 32rem
+
+			&-subtitle
+				font-size: 1rem
+
+			&-title
+				font-size: 3.5rem
+
+			&-text
+				font-size: 0.9rem
+
+			&-more
+
+				&--text
+					font-size: 1rem
+
+		img
+			width: 100%
+
+	.footer_about
+		gap: 9rem
+
+		&-ul
+
+			&--title
+				font-size: 1.2rem
+
+@media (max-width: 1200px)
+	.footer_about
+		gap: 2rem
+
+@media (max-width: 1050px)
+	.container
+		padding: 2.5rem 3.5rem 2.5rem 1.25rem
+
+	.header
+		margin-bottom: 7rem
+
+	.parallax_content
+		max-width: 39rem
+
+		&-title
+			font-size: 3.5rem
+
+	.parallax .img-parallax_item--human
+		top: 55%
+
+	.section
+
+		&_content
+			max-width: 22rem
+
+			&-title
+				font-size: 2.5rem
+
+			&-text
+				font-size: 0.8rem
+
+	.footer
+		flex-direction: column-reverse
+		gap: 2rem
+
+		&_info
+			margin-left: auto
+
+			&-text
+				margin: 0 auto 2.5rem
+				max-width: 17rem
+				text-align: center
+
+			&-logo
+				text-align: center
+
+		&_about
+			gap: 10rem
+
+@media (max-width: 850px)
+	.container
+		padding: 2rem 3.25rem 2rem 1rem
+
+	.header
+		margin-bottom: 5rem
+
+		&_ul
+			gap: 1.5rem
+
+	.parallax_content
+		max-width: 28rem
+
+		&-subtitle
+			font-size: 1rem
+
+			&::before
+				width: 4rem
+
+		&-title
+			font-size: 2.5rem
+			line-height: 4.25rem
+			margin: 1rem auto
+
+		&-scroll
+			font-size: 1rem
+
+	.slider
+		display: flex
+		gap: 1rem
+		right: 3%
+		top: 20%
+
+	.socials
+		left: 2%
+		top: 20%
+
+	.section
+		display: grid
+		margin-bottom: 8rem
+
+		&_content
+			max-width: 27rem
+
+			&-title
+				font-size: 2rem
+				max-width: 20rem
+
+		&_img
+			text-align: center
+
+			img
+				width: 85%
+
+	.footer_info
+		margin-left: 0
+
+@media (max-width: 650px)
+	.burger
+		display: grid
+
+	.header
+		&_nav
+			display: none
+
+	.parallax_content
+		max-width: 22rem
+
+		&-subtitle
+			font-size: 1rem
+
+			&::before
+				width: 3rem
+
+		&-title
+			font-size: 2rem
+			line-height: 3.25rem
+			margin: 1rem auto
+
+	.section
+		margin-bottom: 6re
+
+@media (max-width: 480px)
+	.container
+		padding: 2rem 2.75rem 2rem 0
+
+	.slider
+		top: 40%
+
+	.socials
+		display: none
+
+	.parallax_content
+		max-width: 17rem
+
+		&-title
+			font-size: 1.5rem
+			line-height: 3rem
+			margin: 1rem auto
+
+		&-subtitle
+			gap: 1rem
+
+	.section
+		margin-bottom: 4rem
+
+		&_span
+			font-size: 11rem
+			line-height: 2rem
+
+		&_content
+			max-width: 22rem
+
+			&-subtitle
+				gap: 1rem
+
+				&::before
+					width: 3rem
+
+			&-title
+				font-size: 1.25rem
+
+			&-text
+				font-size: 0.7rem
+
+			&-more
+
+				&--text
+					font-size: 0.9rem
+
+	.footer_about
+		gap: 3rem
+		flex-wrap: wrap
+
+	.footer_info
+
+		&-text
+			margin-bottom: 0 auto 1.5rem
+
+		&-socials
+			@include flex(center, center)
+			gap: 2rem
+			margin-bottom: 1.5rem
+			font-weight: 700
+
+		&-copyright
+			font-size: 0.8rem

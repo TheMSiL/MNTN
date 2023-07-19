@@ -1,0 +1,26 @@
+@import vars
+@import mixins
+
+.header
+	@include flex(center, space-between)
+	margin-bottom: 7.5rem
+
+	&_ul
+		@include flex(center)
+		gap: 2.5rem
+
+	&_li
+		transition: $ease500
+		font-weight: 700
+		&:hover
+			color: $orange_text
+
+	&_account
+		@include flex(center)
+		gap: 0.7rem
+		font-weight: 700
+
+		img
+			transition: $ease1
+			&:hover
+				transform: scale(1.2)
