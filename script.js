@@ -101,7 +101,6 @@ const scrollToSection = () => {
 		item.addEventListener('click', event => scrollSection(event, index));
 	});
 
-
 	//scroll to section slider
 	function scrollSection(event, index) {
 		event.preventDefault();

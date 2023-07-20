@@ -1,6 +1,16 @@
 @import header
 @import vars
 
+@keyframes goDown
+	0%
+		transform: translateY(0%)
+
+	50%
+		transform: translateY(1.5rem)
+
+	100%
+		transform: translateY(0%)
+
 .container
 	max-width: 90%
 	margin: $margin_center
@@ -45,7 +55,7 @@
 
 		&-title
 			margin: 2rem 0
-			font-size: 4.5rem
+			font-size: 4rem
 			font-weight: 700
 			line-height: 6.25rem
 			text-transform: capitalize
@@ -55,6 +65,9 @@
 			gap: 1rem
 			font-size: 1.25rem
 			font-weight: 700
+
+			svg
+				animation: goDown 3s infinite ease
 
 	&_img
 		position: absolute
